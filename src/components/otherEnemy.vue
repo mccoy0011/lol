@@ -4,8 +4,10 @@
     li(v-for="item in allEnemyInfo")
       .skill(v-for="ii in item", @click="startCountDown(ii)")
         .inner(:style="{height: timePersent(ii)}", :class="bgColor(ii)")
-        p| {{ ii.skillName }}
-        p| {{ ii.timeout }}
+        p
+          |{{ ii.skillName }}
+        p
+          |{{ ii.timeout }}
 </template>
 
 <script>
@@ -75,13 +77,6 @@ export default {
 .content
   width: 100%
   padding-top: 2vh
-  .cir
-    width: 60px;
-    height: 120px;
-    border-radius: 120px 0 0 120px;
-    z-index: 3;
-    background: sandybrown;
-
   ul
     list-style-type: none
     display: flex;
@@ -94,21 +89,19 @@ export default {
         height: 8vh
         margin-bottom: 1vh
         background: #fff
-        border-radius: 100px;
         line-height: 4vh;
         text-align: center
-        border: 2px #3fecff solid;
+        border: 2px #409EFF solid;
         overflow: hidden;
         .inner
           position: absolute
           width: 100%;
           bottom: 0;
           left: 0;
-          background: #6149f6
         .low
-          background: #07c160
+          background: #67C23A
         .middle
-          background: #ff976a
+          background: #E6A23C
         .high
-          background: #ee0a24
+          background: #F56C6C
 </style>
